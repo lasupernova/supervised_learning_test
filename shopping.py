@@ -31,22 +31,6 @@ def main():
     print(f"Incorrect: {(y_test != predictions).sum()}")
     print(f"True Positive Rate: {100 * sensitivity:.2f}%")
     print(f"True Negative Rate: {100 * specificity:.2f}%")
-
-
-#after importing the data using pandas I got familiar with the data doing the following:
-# 1. checked columns in resulting dataframe: data.columns
-# 2. checked length number of rows and columns: data.shape
-# 3. pre-checked the unique values for each columns; especially for columns Month, VisitorType, Weekend and Revenue as these had to be replaced
-#       NOTE: abbreviation for June was June and not Jun! --> mapping-dictionary was layed out accordingly
-#       for column in data.columns:
-#           print(f'{len(data[column].unique())} values in column name {column}: \n{data[column].unique()}')
-#           print(f'\n')
-# 4. checked if there were any nan-values: data[data.isna().any(axis=1)]
-#
-#ALTERNATIVE to pandas would be: 
-#with open('shopping.csv', newline='') as f:
-#    reader = csv.reader(f)
-#    data = list(reader)
     
 def load_data(filename):
     """
